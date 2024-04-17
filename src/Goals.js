@@ -1,7 +1,13 @@
 import React from 'react'
 import Header from './Header'
+import { useNavigate } from 'react-router-dom';
+
 
 function Goals() {
+    const navigate = useNavigate();
+    const nextPage = () => {
+        navigate("/workoutTracker");
+    }
     return (
         <div>
             <div>
@@ -48,7 +54,7 @@ function Goals() {
             </div>
 
             <div className="flex justify-center mt-14">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white  py-3 px-28 rounded-2xl">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white  py-3 px-28 rounded-2xl" onClick={nextPage}>
                     Confirm
                 </button>
             </div>

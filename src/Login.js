@@ -3,8 +3,14 @@ import Header from './Header'
 import google from "./assets/google.svg"
 import facebook from "./assets/facebook.svg"
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
+    const navigate = useNavigate();
+    const nextPage = () => {
+        navigate("/goals");
+    }
     return (
         <div>
             <div>
@@ -31,7 +37,7 @@ function Login() {
 
             <div className='absolute bottom-0 left-0 w-full'>
                 <div className="flex justify-center">
-                    <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white  py-3 px-20 rounded-2xl">
+                    <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white  py-3 px-20 rounded-2xl" onClick={nextPage}>
                         Sign In
                     </button>
                 </div>
@@ -51,7 +57,7 @@ function Login() {
                     </div>
                 </div>
 
-                <div className='flex justify-center mt-3 mb-6 text-sm'>Don't have an account yet? <a href=""> Create an account</a></div>
+                <div className='flex justify-center mt-3 mb-6 text-sm'>Don't have an account yet? <a href="/signup"> Create an account</a></div>
 
             </div>
 

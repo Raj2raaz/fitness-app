@@ -4,19 +4,32 @@ import BottomNavbar from './BottomNavbar'
 import Chart from './Chart'
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
 import running from "./assets/running.jpg"
+import { useNavigate } from 'react-router-dom';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+
 
 
 function WorkoutTracker() {
+    const navigate = useNavigate();
+    const nextPage = () => {
+        navigate("/workoutSchedule");
+    }
+    const prevPage = () => {
+        navigate("/goals");
+    }
     return (
         <div>
             <div>
                 <Header />
             </div>
 
-            <div className="mb-20">
-                <div className='mt-12 flex justify-center text-2xl font-semibold'>Workout Tracker</div>
+            <div className="mb-10">
+            <div className='mt-12 ml-4 flex items-center '>
+        <div className='' onClick={prevPage}><KeyboardArrowLeftIcon /></div>
+        <div className=' ml-10 text-2xl font-semibold'>Workout Tracker</div>
+      </div>
 
-                <div>
+                <div onClick={nextPage}>
                     <Chart />
                 </div>
 

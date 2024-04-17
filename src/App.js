@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FirstPage from './FirstPage'
 import  SecondPage from './SecondPage'
 import Signup from './Signup'
@@ -6,23 +7,27 @@ import Login from './Login'
 import Goals from './Goals'
 import WorkoutTracker from './WorkoutTracker'
 import WorkoutSchedule from './WorkoutSchedule'
-import Chart from './Chart'
+
 
 
 function App() {
   return (
-    <div>
       
-      {/* <FirstPage /> */}
-      {/* <SecondPage/> */}
-      {/* <Signup/> */}
-      {/* <Login/> */}
-      {/* <Goals/> */}
-      <WorkoutTracker/>
-      {/* <WorkoutSchedule/> */}
-      {/* <Chart/> */}
+    <Router>  
+        <Routes>
+          <Route path="/" element={<FirstPage />} />
+          <Route path="/secondPage" element={<SecondPage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/workoutTracker" element={<WorkoutTracker />} />
+          <Route path="/workoutSchedule" element={<WorkoutSchedule />} />  
+        </Routes>
       
-    </div>
+    </Router>
+
+      
+    
   )
 }
 

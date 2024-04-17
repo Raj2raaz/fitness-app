@@ -2,9 +2,15 @@ import React from 'react'
 import Header from './Header'
 import google from "./assets/google.svg"
 import facebook from "./assets/facebook.svg"
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Signup() {
+    const navigate = useNavigate();
+    const nextPage = () => {
+        navigate("/login");
+    }
     return (
         <div>
             <div>
@@ -36,7 +42,7 @@ function Signup() {
 
             <div className='absolute bottom-0 left-0 w-full'>
                 <div className="flex justify-center">
-                    <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white  py-3 px-20 rounded-2xl">
+                    <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white  py-3 px-20 rounded-2xl" onClick={nextPage}>
                         Create an Account
                     </button>
                 </div>
@@ -56,7 +62,7 @@ function Signup() {
                     </div>
                 </div>
 
-                <div className='flex justify-center mt-3 mb-6 text-sm'>Already have an account? <a href="">Login</a></div>
+                <div className='flex justify-center mt-3 mb-6 text-sm'>Already have an account? <a href="/login">Login</a></div>
 
             </div>
 
