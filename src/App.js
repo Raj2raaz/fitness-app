@@ -5,6 +5,9 @@ import Signup from './Signup'
 import Login from './Login'
 import Goals from './Goals'
 import WorkoutTracker from './WorkoutTracker'
+import WorkoutSchedule from './WorkoutSchedule'
+import Chart from './Chart'
+
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
       {/* <Login/> */}
       {/* <Goals/> */}
       <WorkoutTracker/>
+      {/* <WorkoutSchedule/> */}
+      {/* <Chart/> */}
+      
     </div>
   )
 }
