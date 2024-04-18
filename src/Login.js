@@ -32,7 +32,7 @@ function Login() {
 
 
             <div className='px-8 mt-4  text-sm '>
-                <a href="">Forgot your password?</a>
+                <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Forgot your password?</a>
             </div>
 
             <div className='absolute bottom-0 left-0 w-full'>
@@ -57,7 +57,7 @@ function Login() {
                     </div>
                 </div>
 
-                <div className='flex justify-center mt-3 mb-6 text-sm'>Don't have an account yet? <a href="/signup"> Create an account</a></div>
+                <div className='flex justify-center mt-3 mb-6 text-sm'>Don't have an account yet? <a href="/signup" class="text-blue-600 dark:text-blue-500 hover:underline"> Create an account</a></div>
 
             </div>
 

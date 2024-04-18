@@ -62,7 +62,7 @@ function Signup() {
                     </div>
                 </div>
 
-                <div className='flex justify-center mt-3 mb-6 text-sm'>Already have an account? <a href="/login">Login</a></div>
+                <div className='flex justify-center mt-3 mb-6 text-sm'>Already have an account? <a href="/login" class="text-blue-600 dark:text-blue-500 hover:underline">Login</a></div>
 
             </div>
 
